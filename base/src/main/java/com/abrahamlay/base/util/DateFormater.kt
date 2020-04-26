@@ -30,6 +30,31 @@ open class DateFormater {
 
             return ""
         }
+
+        @JvmStatic
+        @SuppressLint("SimpleDateFormat")
+        fun changeDateTimeFormat(
+            dateInput: String?
+        ): String {
+
+            try {
+                dateInput.let {
+                    val inputFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
+                    val outputFormat = SimpleDateFormat(
+                        "EEEE,  MMM dd, yyyy", Locale.ENGLISH
+                    )
+                    val date: Date
+                    date = inputFormat.parse(dateInput!!)!!
+
+                    return outputFormat.format(date)
+                }
+            } catch (e: ParseException) {
+                e.printStackTrace()
+            }
+
+            return ""
+        }
+
     }
 
 }

@@ -1,5 +1,7 @@
 package com.abrahamlay.data.repoimplementations
 
+import com.abrahamlay.base.util.DateFormater
+import com.abrahamlay.base.util.NumberFormater
 import com.abrahamlay.data.apis.Covid19API
 import com.abrahamlay.domain.entities.Country
 import com.abrahamlay.domain.entities.Global
@@ -20,25 +22,25 @@ class Covid19RepositoryImpl constructor(private val api: Covid19API) : Covid19Re
                     Country(
                         country.country,
                         country.countryCode,
-                        country.date,
-                        country.newConfirmed,
-                        country.newDeaths,
-                        country.newRecovered,
+                        DateFormater.changeDateTimeFormat(country.date),
+                        NumberFormater.usFormat(country.newConfirmed),
+                        NumberFormater.usFormat(country.newDeaths),
+                        NumberFormater.usFormat(country.newRecovered),
                         country.slug,
-                        country.totalConfirmed,
-                        country.totalDeaths,
-                        country.totalRecovered
+                        NumberFormater.usFormat(country.totalConfirmed),
+                        NumberFormater.usFormat(country.totalDeaths),
+                        NumberFormater.usFormat(country.totalRecovered)
                     )
 
                 },
-                summary.date,
+                DateFormater.changeDateTimeFormat(summary.date),
                 Global(
-                    summary.global.newConfirmed,
-                    summary.global.newDeaths,
-                    summary.global.newRecovered,
-                    summary.global.totalConfirmed,
-                    summary.global.totalDeaths,
-                    summary.global.totalRecovered
+                    NumberFormater.usFormat(summary.global.newConfirmed),
+                    NumberFormater.usFormat(summary.global.newDeaths),
+                    NumberFormater.usFormat(summary.global.newRecovered),
+                    NumberFormater.usFormat(summary.global.totalConfirmed),
+                    NumberFormater.usFormat(summary.global.totalDeaths),
+                    NumberFormater.usFormat(summary.global.totalRecovered)
                 )
             )
         }

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="countryData"
+            type="com.abrahamlay.domain.entities.Country" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_24dp">
+
+        <TextView
+            android:id="@+id/tvNewCasesLabel"
+            style="@style/TextAppearance.AppCompat.Covid.App.SubTitle.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:text="@string/new_cases"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTotalCasesLabel"
+            style="@style/TextAppearance.AppCompat.Covid.App.SubTitle.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:text="@string/total_cases"
+            app:layout_constraintLeft_toRightOf="@+id/guideline"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.abrahamlay.widget.StatisticCardView
+            android:id="@+id/scvNewConfirmed"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/tvNewCasesLabel"
+            app:scv_background="@color/colorAffected"
+            app:scv_label="Affected"
+            app:scv_value="@{countryData.newConfirmed}" />
+
+        <com.abrahamlay.widget.StatisticCardView
+            android:id="@+id/scvTotalConfirmed"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            app:layout_constraintLeft_toRightOf="@+id/guideline"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTotalCasesLabel"
+            app:scv_background="@color/colorAffected"
+            app:scv_label="Affected"
+            app:scv_value="@{countryData.totalConfirmed}" />
+
+        <com.abrahamlay.widget.StatisticCardView
+            android:id="@+id/scvNewDeath"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/scvNewConfirmed"
+            app:scv_background="@color/colorDeath"
+            app:scv_label="Death"
+            app:scv_value="@{countryData.newDeaths}" />
+
+        <com.abrahamlay.widget.StatisticCardView
+            android:id="@+id/scvTotalDeath"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            app:layout_constraintLeft_toRightOf="@+id/guideline"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scvTotalConfirmed"
+            app:scv_background="@color/colorDeath"
+            app:scv_label="Death"
+            app:scv_value="@{countryData.totalDeaths}" />
+
+
+        <com.abrahamlay.widget.StatisticCardView
+            android:id="@+id/scvNewRecovered"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:layout_marginBottom="@dimen/margin_16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/scvNewDeath"
+            app:scv_background="@color/colorRecovered"
+            app:scv_label="Recovered"
+            app:scv_value="@{countryData.newRecovered}" />
+
+        <com.abrahamlay.widget.StatisticCardView
+            android:id="@+id/scvTotalRecovered"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:layout_marginBottom="@dimen/margin_16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/guideline"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scvTotalDeath"
+            app:scv_background="@color/colorRecovered"
+            app:scv_label="Recovered"
+            app:scv_value="@{countryData.totalRecovered}" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

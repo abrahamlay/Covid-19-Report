@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary"
+    android:paddingBottom="@dimen/margin_24dp">
+    <TextView
+        android:id="@+id/titlePage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/datePage"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Covid.App.Title"
+        android:text="@string/aroundWorld"
+        />
+    <TextView
+        android:id="@+id/datePage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:layout_marginRight="@dimen/margin_24dp"
+        android:layout_marginEnd="@dimen/margin_24dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Covid.App.Small"
+        tools:text="Thursday, 23 Mei 2020"
+        />
+    <TextView
+        android:id="@+id/tvNewCasesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/titlePage"
+        style="@style/TextAppearance.AppCompat.Covid.App.SubTitle"
+        android:text="@string/new_cases"
+        />
+
+    <TextView
+        android:id="@+id/tvTotalCasesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16dp"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titlePage"
+        style="@style/TextAppearance.AppCompat.Covid.App.SubTitle"
+        android:text="@string/total_cases"
+        />
+    <com.abrahamlay.widget.StatisticCardView
+        android:id="@+id/scvNewConfirmed"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tvNewCasesLabel"
+        app:scv_background="@color/colorAffected"
+        app:scv_label="Affected"
+        app:scv_value="0" />
+
+    <com.abrahamlay.widget.StatisticCardView
+        android:id="@+id/scvTotalConfirmed"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8dp"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTotalCasesLabel"
+        app:scv_background="@color/colorAffected"
+        app:scv_label="Affected"
+        app:scv_value="0" />
+
+    <com.abrahamlay.widget.StatisticCardView
+        android:id="@+id/scvNewDeath"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/scvNewConfirmed"
+        app:scv_background="@color/colorDeath"
+        app:scv_label="Death"
+        app:scv_value="0" />
+
+    <com.abrahamlay.widget.StatisticCardView
+        android:id="@+id/scvTotalDeath"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16dp"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scvTotalConfirmed"
+        app:scv_background="@color/colorDeath"
+        app:scv_label="Death"
+        app:scv_value="0" />
+
+
+    <com.abrahamlay.widget.StatisticCardView
+        android:id="@+id/scvNewRecovered"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/scvNewDeath"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:scv_background="@color/colorRecovered"
+        app:scv_label="Recovered"
+        app:scv_value="0" />
+
+    <com.abrahamlay.widget.StatisticCardView
+        android:id="@+id/scvTotalRecovered"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scvTotalDeath"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:scv_background="@color/colorRecovered"
+        app:scv_label="Recovered"
+        app:scv_value="0" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

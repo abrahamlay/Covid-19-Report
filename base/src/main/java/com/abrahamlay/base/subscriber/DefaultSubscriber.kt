@@ -8,12 +8,14 @@ abstract class DefaultSubscriber<T> : DisposableSubscriber<T>() {
     }
 
     override fun onNext(data: T) {
-        onSuccess(data)
+        onSuccess(ResultState.Success(data))
     }
 
     override fun onError(throwable: Throwable) {
-        // no-op by default.
+        onError(ResultState.Error(throwable))
     }
 
-    abstract fun onSuccess(data: T)
+    abstract fun onError(error: ResultState<T>)
+
+    abstract fun onSuccess(data: ResultState<T>)
 }

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StatisticCardView">
+        <attr name="scv_label" format="string" />
+        <attr name="scv_value" format="string" />
+        <attr name="scv_background" format="reference" />
+    </declare-styleable>
+</resources>

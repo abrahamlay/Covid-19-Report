@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="aroundWorld">Around The World</string>
+    <string name="new_cases">New Cases</string>
+    <string name="total_cases">Total Cases</string>
+    <string name="countries">Countries</string>
+</resources>
