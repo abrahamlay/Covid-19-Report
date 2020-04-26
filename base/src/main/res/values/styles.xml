@@ -1,0 +1,62 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="font">@font/graphik_medium</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="font">@font/graphik_medium</item>
+    </style>
+
+
+    <!-- TextAppearance-->
+    <style name="TextAppearance.AppCompat.Covid.App" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="font">@font/graphik_medium</item>
+    </style>
+
+    <!-- TextAppearance-->
+    <style name="TextAppearance.AppCompat.Covid.App.Title" parent="TextAppearance.AppCompat.Covid.App">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Covid.App.SubTitle" parent="TextAppearance.AppCompat.Covid.App">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Covid.App.SubTitle.Black" parent="TextAppearance.AppCompat.Covid.App">
+        <item name="android:textColor">@color/colorBlack2</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="TextAppearance.AppCompat.Covid.App.Small" parent="TextAppearance.AppCompat.Covid.App">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+    <style name="TextAppearance.AppCompat.Covid.App.Item.Title" parent="TextAppearance.AppCompat.Covid.App">
+        <item name="android:textColor">@color/colorBlack2</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Covid.App.Statistic.Label" parent="TextAppearance.AppCompat.Covid.App">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Covid.App.Statistic.Value" parent="TextAppearance.AppCompat.Covid.App">
+        <item name="android:textSize">24sp</item>
+    </style>
+</resources>

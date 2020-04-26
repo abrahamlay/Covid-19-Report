@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#473F97</color>
+    <color name="colorPrimaryDark">@color/colorPrimary</color>
+    <color name="colorAccent">@color/colorWhite</color>
+    <color name="colorGrey1">#e0e0e0</color>
+    <color name="colorGrey2">#BDBDBD</color>
+    <color name="colorBlack1">#212121</color>
+    <color name="colorBlack2">#0D1333</color>
+    <color name="colorWhite">#eeeeee</color>
+    <color name="colorTransparentGrey">#B3BDBDBD</color>
+    <color name="colorAffected">#FFB259</color>
+    <color name="colorDeath">#FF5959</color>
+    <color name="colorRecovered">#4CD97B</color>
+    <color name="colorActive">#4DB5FF</color>
+    <color name="colorSerious">#9059FF</color>
+</resources>
