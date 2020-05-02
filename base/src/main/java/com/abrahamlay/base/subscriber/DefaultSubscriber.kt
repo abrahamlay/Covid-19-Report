@@ -4,7 +4,7 @@ import io.reactivex.subscribers.DisposableSubscriber
 
 abstract class DefaultSubscriber<T> : DisposableSubscriber<T>() {
     override fun onComplete() {
-        // no-op by default.
+        onError(ResultState.Error(Throwable("Cannot reach the server")))
     }
 
     override fun onNext(data: T) {

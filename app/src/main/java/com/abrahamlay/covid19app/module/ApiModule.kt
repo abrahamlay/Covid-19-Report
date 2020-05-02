@@ -9,8 +9,8 @@ import org.koin.dsl.module
  */
 
 val apiModule = module {
-    single { WebApiProvider }
-    single {
+    single<WebApiProvider> { WebApiProvider }
+    single<Covid19API> {
         get<WebApiProvider>()
             .getRetrofit()
             .create(Covid19API::class.java)

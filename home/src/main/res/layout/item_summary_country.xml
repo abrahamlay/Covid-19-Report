@@ -11,7 +11,7 @@
 
         <variable
             name="countryData"
-            type="com.abrahamlay.domain.entities.Country" />
+            type="com.abrahamlay.domain.entities.CountryData" />
 
     </data>
 
@@ -36,10 +36,10 @@
                 android:layout_width="@dimen/margin_48dp"
                 android:layout_height="@dimen/margin_36dp"
                 android:layout_margin="@dimen/margin_8dp"
-                app:countryCodeThumbnail="@{countryData.countryCode}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:loadIcon="@{countryData.countryCode}" />
 
             <TextView
                 style="@style/TextAppearance.AppCompat.Covid.App.Item.Title"

@@ -13,7 +13,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.abrahamlay.base.presentation.BaseActivity
 import com.abrahamlay.base.presentation.BaseFragment
 import com.abrahamlay.base.subscriber.ResultState
-import com.abrahamlay.domain.entities.Country
+import com.abrahamlay.domain.entities.CountryData
 import com.abrahamlay.domain.entities.SummaryData
 import com.abrahamlay.home.databinding.FragmentHomeBinding
 import com.abrahamlay.home.detail.DetailFragment
@@ -106,8 +106,8 @@ class HomeFragment : BaseFragment<HomeViewModel>(), SwipeRefreshLayout.OnRefresh
     }
 
     override fun onItemClicked(data: Any) {
-        Toast.makeText(context, (data as Country).country, Toast.LENGTH_SHORT).show()
-        val bundle = bundleOf(Pair(DetailFragment.PARAM_DETAIL_COUNTRY, (data as Country)))
+        Toast.makeText(context, (data as CountryData).country, Toast.LENGTH_SHORT).show()
+        val bundle = bundleOf(Pair(DetailFragment.PARAM_DETAIL_COUNTRY, (data as CountryData)))
         findNavController().navigate(R.id.action_mainFragment_to_detailFragment, bundle)
     }
 

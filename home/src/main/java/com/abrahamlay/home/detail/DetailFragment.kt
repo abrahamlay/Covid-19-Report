@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.abrahamlay.base.presentation.BaseActivity
 import com.abrahamlay.base.presentation.BaseFragment
 import com.abrahamlay.base.subscriber.BaseViewModel
-import com.abrahamlay.domain.entities.Country
+import com.abrahamlay.domain.entities.CountryData
 import com.abrahamlay.home.R
 import com.abrahamlay.home.databinding.FragmentDetailBinding
 import kotlinx.android.synthetic.main.fragment_detail.*
@@ -20,7 +20,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
  */
 class DetailFragment : BaseFragment<BaseViewModel>() {
 
-    private var country: Country? = null
+    private var country: CountryData? = null
 
     override val viewModel by viewModel<BaseViewModel>()
 

@@ -6,11 +6,11 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import io.reactivex.subscribers.DisposableSubscriber
 
-abstract class UseCase<T, in Params>(private val postExecutionThread: PostExecutionThread) {
+abstract class FlowableUseCase<T, in Params>(private val postExecutionThread: PostExecutionThread) {
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
 
     /**
-     * Builds an [Flowable] which will be used when executing the current [UseCase].
+     * Builds an [Flowable] which will be used when executing the current [FlowableUseCase].
      */
     abstract fun build(params: Params): Flowable<T>
 

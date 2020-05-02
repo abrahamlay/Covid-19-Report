@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav"
     app:startDestination="@id/mainFragment">
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.abrahamlay.home.HomeFragment"
-        android:label="MainFragment" >
+        android:label="MainFragment">
         <action
             android:id="@+id/action_mainFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
@@ -18,7 +17,7 @@
         android:label="DetailFragment">
         <argument
             android:name="countryData"
-            app:argType="com.abrahamlay.domain.entities.Country" />
+            app:argType="com.abrahamlay.domain.entities.CountryData" />
         <action
             android:id="@+id/action_detailFragment_pop"
             app:popUpTo="@id/detailFragment"

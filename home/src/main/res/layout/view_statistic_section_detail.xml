@@ -5,7 +5,7 @@
 
         <variable
             name="countryData"
-            type="com.abrahamlay.domain.entities.Country" />
+            type="com.abrahamlay.domain.entities.CountryData" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"

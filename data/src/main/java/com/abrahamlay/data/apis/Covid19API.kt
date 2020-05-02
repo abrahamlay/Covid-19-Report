@@ -2,7 +2,6 @@ package com.abrahamlay.data.apis
 
 import com.abrahamlay.data.dtos.SummaryDto
 import io.reactivex.Flowable
-import io.reactivex.Single
 import retrofit2.http.GET
 
 /**

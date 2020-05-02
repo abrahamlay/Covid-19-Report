@@ -5,9 +5,9 @@ import com.google.gson.annotations.SerializedName
 
 data class SummaryDto(
     @SerializedName("Countries")
-    val countries: List<Country>,
+    val countries: List<CountryDto>,
     @SerializedName("Date")
     val date: String,
     @SerializedName("Global")
-    val global: Global
+    val global: GlobalDto
 )

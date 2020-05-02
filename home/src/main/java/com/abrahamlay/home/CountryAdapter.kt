@@ -3,13 +3,8 @@ package com.abrahamlay.home
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.abrahamlay.base.constant.Constants.Companion.THUMBNAIL_BASE_URL_EXTRA_SMALL
-import com.abrahamlay.base.constant.Constants.Companion.THUMBNAIL_BASE_URL_SMALL
-import com.abrahamlay.base.util.GlideHelper
-import com.abrahamlay.domain.entities.Country
+import com.abrahamlay.domain.entities.CountryData
 import com.abrahamlay.home.databinding.ItemSummaryCountryBinding
 
 /**
@@ -28,7 +23,7 @@ class CountryAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         return CountryItemViewHolder(binding)
     }
 
-    var data: List<Country>? = null
+    var data: List<CountryData?>? = null
 
     var onClickListener: OnClickListener? = null
 
@@ -40,7 +35,7 @@ class CountryAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         (viewHolder as CountryItemViewHolder).itemSummaryCountryBinding.countryData = data!![pos]
         viewHolder.setOnClickListener(View.OnClickListener {
             onClickListener?.onItemClicked(
-                data!![pos]
+                data!![pos]!!
             )
         })
     }

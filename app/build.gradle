@@ -27,7 +27,7 @@ android {
     }
 
     buildTypes {
-        debug{
+        debug {
             debuggable true
             minifyEnabled false
             shrinkResources false
@@ -42,18 +42,18 @@ android {
     }
 
     flavorDimensions "env"
-    productFlavors{
+    productFlavors {
         development {
             dimension "env"
             applicationId "com.abrahamlay.covid19app.dev"
             buildConfigField("String", "API_BASE_URL", config.env.dev.baseurl)
         }
-        staging{
+        staging {
             dimension "env"
             applicationId "com.abrahamlay.covid19app.dev"
             buildConfigField("String", "API_BASE_URL", config.env.staging.baseurl)
         }
-        production{
+        production {
             dimension "env"
             applicationId 'com.abrahamlay.covid19app'
             buildConfigField("String", "API_BASE_URL", config.env.prod.baseurl)
@@ -69,6 +69,10 @@ dependencies {
     implementation project(':data')
     implementation project(':base')
     implementation project(':home')
+
+    //database
+    implementation support.room
+    kapt support.roomCompiler
 
     //androidx
     implementation support.appcompat

@@ -12,21 +12,8 @@ import com.abrahamlay.widget.StatisticCardView
 class BindingAdapterUtils {
     companion object {
         @JvmStatic
-        @BindingAdapter("countryCodeThumbnail")
+        @BindingAdapter("loadIcon")
         fun loadIcon(view: ImageView, countryCode: String?) {
-            if (!countryCode.isNullOrEmpty()) {
-                val addedUrl = String.format(Constants.THUMBNAIL_BASE_URL_LARGE, countryCode)
-                GlideHelper.showImage(
-                    addedUrl,
-                    view,
-                    view.context
-                )
-            }
-        }
-
-        @JvmStatic
-        @BindingAdapter("countryCodeBanner")
-        fun loadBanner(view: ImageView, countryCode: String?) {
             if (!countryCode.isNullOrEmpty()) {
                 val addedUrl = String.format(Constants.THUMBNAIL_BASE_URL_EXTRA_LARGE, countryCode)
                 GlideHelper.showImage(
